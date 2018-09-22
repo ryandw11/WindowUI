@@ -13,12 +13,14 @@ public class WindowUIEvent {
     private int id;
     private int output;
     private WindowUIMenu wum;
+    private string input;
 
     public WindowUIEvent(int id, int output, WindowUIMenu wum)
     {
         this.id = id;
         this.output = output;
         this.wum = wum;
+        input = wum.getInput();
     }
 
     /*
@@ -45,5 +47,16 @@ public class WindowUIEvent {
     public void close()
     {
         wum.close();
+    }
+
+    /*
+        Get the input message.
+        If not active returns null.
+    */
+    public string getInput()
+    {
+        if(wum.getType() == WindowType.INPUTFIELD)
+            return input;
+        return null;
     }
 }

@@ -16,6 +16,7 @@ public class UnityHook : MonoBehaviour {
     public GameObject windowUI;
     public ButtonPressEvent ev;
     public WindowUIMenu activeMenu;
+    public InputField inputField;
 
     public Sprite info;
     public Sprite error;

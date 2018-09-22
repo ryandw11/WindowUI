@@ -5,5 +5,5 @@ using UnityEngine;
 public enum WindowImage {
     INFO = 0,
     ERROR = 1,
-    WARNNING = 2
+    WARNING = 2
 }

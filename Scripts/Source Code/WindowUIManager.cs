@@ -21,7 +21,7 @@ public class WindowUIManager {
         {
             return uh.error;
         }
-        if(type == WindowImage.WARNNING)
+        if(type == WindowImage.WARNING)
         {
             return uh.warnning;
         }

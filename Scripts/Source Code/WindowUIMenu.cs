@@ -73,11 +73,17 @@ public class WindowUIMenu
         return exit;
     }
 
+    public string getInput()
+    {
+        return uh.inputField.text;
+    }
+
     /* 
      * Display the gui 
      */
     public void display()
     {
+        uh.inputField.gameObject.SetActive(false);
         Image wimg = uh.image;
         wimg.sprite = wum.getImage(img);
         Text header = uh.textTitle;
@@ -99,6 +105,14 @@ public class WindowUIMenu
             uh.ok.gameObject.SetActive(false);
             uh.yes.gameObject.GetComponentInChildren<Text>().text = buttons[0];
             uh.no.gameObject.GetComponentInChildren<Text>().text = buttons[1];
+        }else if (type == WindowType.INPUTFIELD)
+        {
+            uh.yes.gameObject.SetActive(false);
+            uh.no.gameObject.SetActive(false);
+            uh.ok.gameObject.SetActive(true);
+            uh.ok.gameObject.GetComponentInChildren<Text>().text = buttons[0];
+            uh.inputField.gameObject.SetActive(true);
+            uh.inputField.placeholder.GetComponent<Text>().text = buttons[1];
         }
         if (exit)
         {

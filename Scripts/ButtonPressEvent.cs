@@ -19,6 +19,5 @@ public class ButtonPressEvent : MonoBehaviour{
      */
     public void buttonPressed(WindowUIEvent e)
     {
-
     }
 }
